@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toko Online</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: #333;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+        }
+        .container {
+            padding: 20px;
+            text-align: center;
+        }
+        .banner {
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)), url('https://example.com/banner.jpg'); /* Ganti URL dengan URL gambar latar belakang yang menarik */
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            position: relative; /* Tambahkan posisi relatif untuk overlay */
+        }
+        .banner h2 {
+            margin-bottom: 20px;
+            z-index: 1; /* Mengatur teks di atas overlay */
+        }
+        .featured-products, .product {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .product-card {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            width: 200px;
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;
+            background-color: white;
+        }
+        .product-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .product-card h3 {
+            margin: 10px 0;
+        }
+        .product-card p {
+            color: #555;
+        }
+        .product-card button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 100%;
+            margin-top: 10px;
+        }
+        .product-card button:hover {
+            background-color: #218838;
+        }
+        .hidden {
+            display: none;
+        }
+        .payment {
+            background-color: #f1f1f1;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 5px;
+            text-align: left;
+        }
+        .payment h2 {
+            margin-bottom: 10px;
+        }
+        .payment ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .payment li {
+            margin-bottom: 10px;
+        }
+        .price-list {
+            background-color: #f1f1f1;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 5px;
+            text-align: left;
+        }
+        .price-list h2 {
+            margin-bottom: 10px;
+        }
+        .price-list ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .price-list li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Toko Online</h1>
+    </header>
+    <nav>
+        <a href="#" onclick="showSection('home')">Beranda</a>
+        <a href="#" onclick="showSection('products')">Produk</a>
+        <a href="#" onclick="showSection('payment')">Pembayaran</a>
+        <a href="#" onclick="showSection('contact')">Kontak</a>
+    </nav>
+    <div id="home" class="container">
+        <div class="banner">
+            <div>
+                <h2>Selamat Datang di Toko Online Kami</h2>
+                <p>Temukan berbagai produk terbaik kami di sini!</p>
+            </div>
+        </div>
+        <h2>Produk Unggulan</h2>
+        <div class="featured-products">
+            <div class="product-card">
+                <img src="https://example.com/product1.jpg" alt="Produk 1">
+                <h3>Produk 1</h3>
+                <p>Deskripsi produk singkat.</p>
+                <button onclick="showPriceList(event, 'Produk 1')">Beli Sekarang</button>
+            </div>
+            <div class="product-card">
+                <img src="https://example.com/product2.jpg" alt="Produk 2">
+                <h3>Produk 2</h3>
+                <p>Deskripsi produk singkat.</p>
+                <button onclick="showPriceList(event, 'Produk 2')">Beli Sekarang</button>
+            </div>
+            <div class="product-card">
+                <img src="https://example.com/product3.jpg" alt="Produk 3">
+                <h3>Produk 3</h3>
+                <p>Deskripsi produk singkat.</p>
+                <button onclick="showPriceList(event, 'Produk 3')">Beli Sekarang</button>
+            </div>
+            <!-- Tambahkan lebih banyak produk di sini -->
+        </div>
+    </div>
+    <div id="products" class="container hidden">
+        <div class="product">
+            <div class="product-card">
+                <img src="https://example.com/product1.jpg" alt="Produk 1">
+                <h3>Produk 1</h3>
+                <button onclick="showPriceList(event, 'Produk 1')">Beli Sekarang</button>
+            </div>
+            <div class="product-card">
+                <img src="https://example.com/product2.jpg" alt="Produk 2">
+                <h3>Produk 2</h3>
+                <button onclick="showPriceList(event, 'Produk 2')">Beli Sekarang</button>
+            </div>
+            <div class="product-card">
+                <img src="https://example.com/product3.jpg" alt="Produk 3">
+                <h3>Produk 3</h3>
+                <button onclick="showPriceList(event, 'Produk 3')">Beli Sekarang</button>
+            </div>
+            <!-- Tambahkan lebih banyak produk di sini -->
+        </div>
+    </div>
+    <div id="payment" class="container hidden payment">
+        <h2>Cara Pembayaran</h2>
+        <ul>
+            <li>Transfer Bank: Bank XXXX, a/n Toko Online, No. Rekening XXXXXXXX</li>
+            <li>OVO: Nomor OVO XXXXXXXXX</li>
+            <li>GoPay: Nomor GoPay XXXXXXXXX</li>
+        </ul>
+        <p>Pastikan untuk melakukan pembayaran sesuai dengan total yang tertera pada halaman checkout.</p>
+    </div>
+    <div id="contact" class="container hidden">
+        <h2>Kontak Kami</h2>
+        <p>WhatsApp: 123456789</p>
+        <p>Instagram: @toko_online</p>
+        <p>TikTok: @toko_online</p>
+    </div>
+    <div id="price-list" class="container hidden price-list">
+        <h2>Daftar Harga</h2>
+        <p id="selected-product">Produk yang dipilih: </p>
+        <ul>
+            <!-- Daftar harga akan ditambahkan melalui JavaScript -->
+        </ul>
+        <button onclick="showSection('products')">Kembali ke Produk</button>
+    </div>
+    <script>
+        function showSection(sectionId) {
+            // Menghilangkan kelas hidden dari bagian yang dipilih dan menambahkannya ke bagian lain
+            ['home', 'products', 'payment', 'contact', 'price-list'].forEach(function(id) {
+                var element = document.getElementById(id);
+                if (id === sectionId) {
+                    element.classList.remove('hidden');
+                } else {
+                    element.classList.add('hidden');
+                }
+            });
+        }
+        
+        function showPriceList(event, productName) {
+            event.stopPropagation();
+            document.getElementById('selected-product').textContent = "Produk yang dipilih: " + productName;
+            
+            // Mengatur daftar harga berdasarkan produk yang dipilih
+            var priceListElement = document.getElementById('price-list').querySelector('ul');
+            priceListElement.innerHTML = ''; // Mengosongkan daftar harga sebelum menambahkan yang baru
+            
+            switch (productName) {
+                case 'Produk 1':
+                    priceListElement.innerHTML = `
+                        <li>100 Diamond - Rp 16.000</li>
+                        <li>200 Diamond - Rp 30.000</li>
+                        <li>500 Diamond - Rp 70.000</li>
+                    `;
+                    break;
+                case 'Produk 2':
+                    priceListElement.innerHTML = `
+                        <li>50 Diamond - Rp 10.000</li>
+                        <li>150 Diamond - Rp 25.000</li>
+                        <li>300 Diamond - Rp 55.000</li>
+                    `;
+                    break;
+                case 'Produk 3':
+                    priceListElement.innerHTML = `
+                        <li>200 Diamond - Rp 30.000</li>
+                        <li>400 Diamond - Rp 60.000</li>
+                        <li>1000 Diamond - Rp 120.000</li>
+                    `;
+                    break;
+                // Tambahkan case untuk produk lain jika diperlukan
+            }
+            
+            showSection('price-list');
+        }
+    </script>
+</body>
+</html>

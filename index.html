@@ -31,9 +31,10 @@
         .container {
             padding: 20px;
             text-align: center;
+            font-weight: bold;
         }
         .banner {
-            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)), url('https://example.com/banner.jpg'); /* Ganti URL dengan URL gambar latar belakang yang menarik */
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)), url('https://github.com/abdiweb/Toko-Online/blob/main/pexels-felixmittermeier-956981.jpg?raw=true'); /* Ganti URL dengan URL gambar latar belakang yang menarik */
             background-size: cover;
             background-position: center;
             height: 300px;
@@ -98,6 +99,7 @@
             margin-top: 20px;
             border-radius: 5px;
             text-align: left;
+            font-weight: bold;
         }
         .payment h2 {
             margin-bottom: 10px;
@@ -114,7 +116,8 @@
             padding: 20px;
             margin-top: 20px;
             border-radius: 5px;
-            text-align: left;
+            text-align: center;
+            font-weight: bold;
         }
         .price-list h2 {
             margin-bottom: 10px;
@@ -141,29 +144,26 @@
     <div id="home" class="container">
         <div class="banner">
             <div>
-                <h2>Selamat Datang di Toko Online Kami</h2>
-                <p>Temukan berbagai produk terbaik kami di sini!</p>
+                <h2>Selamat Datang di Toko Online </h2>
+                
             </div>
         </div>
         <h2>Produk Unggulan</h2>
         <div class="featured-products">
             <div class="product-card">
-                <img src="https://example.com/product1.jpg" alt="Produk 1">
-                <h3>Produk 1</h3>
-                <p>Deskripsi produk singkat.</p>
-                <button onclick="showPriceList(event, 'Produk 1')">Beli Sekarang</button>
+                <img src="https://github.com/abdiweb/Toko-Online/blob/main/FREE%20FIRE.png?raw=true" alt="FREE FIRE">
+                <h3>FREE FIRE</h3>
+                <button onclick="showPriceList(event, 'FREE FIRE')">List Harga</button>
             </div>
             <div class="product-card">
-                <img src="https://example.com/product2.jpg" alt="Produk 2">
-                <h3>Produk 2</h3>
-                <p>Deskripsi produk singkat.</p>
-                <button onclick="showPriceList(event, 'Produk 2')">Beli Sekarang</button>
+                <img src="https://github.com/abdiweb/Toko-Online/blob/main/MOBILE%20LEGENDS.png?raw=true" alt="MOBILE LEGENDS">
+                <h3>MOBILE LEGENDS</h3>
+                <button onclick="showPriceList(event, 'MOBILE LEGENDS')">List Harga</button>
             </div>
             <div class="product-card">
-                <img src="https://example.com/product3.jpg" alt="Produk 3">
-                <h3>Produk 3</h3>
-                <p>Deskripsi produk singkat.</p>
-                <button onclick="showPriceList(event, 'Produk 3')">Beli Sekarang</button>
+                <img src="https://github.com/abdiweb/Toko-Online/blob/main/PULSA.jpeg?raw=true" alt="PULSA">
+                <h3>PULSA</h3>
+                <button onclick="showPriceList(event, 'PULSA')">List Harga</button>
             </div>
             <!-- Tambahkan lebih banyak produk di sini -->
         </div>
@@ -171,19 +171,33 @@
     <div id="products" class="container hidden">
         <div class="product">
             <div class="product-card">
-                <img src="https://example.com/product1.jpg" alt="Produk 1">
-                <h3>Produk 1</h3>
-                <button onclick="showPriceList(event, 'Produk 1')">Beli Sekarang</button>
+                <h3>FREE FIRE</h3>
+                <button onclick="showPriceList(event, 'FREE FIRE')">List Harga</button>
             </div>
             <div class="product-card">
-                <img src="https://example.com/product2.jpg" alt="Produk 2">
-                <h3>Produk 2</h3>
-                <button onclick="showPriceList(event, 'Produk 2')">Beli Sekarang</button>
+                <h3>MOBILE LEGENDS</h3>
+                <button onclick="showPriceList(event, 'MOBILE LEGENDS')">List Harga</button>
             </div>
             <div class="product-card">
-                <img src="https://example.com/product3.jpg" alt="Produk 3">
-                <h3>Produk 3</h3>
-                <button onclick="showPriceList(event, 'Produk 3')">Beli Sekarang</button>
+                <h3>PUBG MOBILE</h3>
+                <button onclick="showPriceList(event, 'PUBG MOBILE')">List Harga</button>
+            </div>
+            <div class="product-card">
+                <h3>PULSA</h3>
+                <button onclick="showPriceList(event, 'PULSA')">List Harga</button>
+            </div>
+            <div class="product-card">
+                <h3>TOKEN LISTRIK</h3>
+                <button onclick="showPriceList(event, 'TOKEN LISTRIK')">List Harga</button>
+            </div>
+            <div class="product-card">
+                <h3>EWALLET</h3>
+                <button onclick="showPriceList(event, 'EWALLET')">List Harga</button>
+            </div>
+            <div class="product-card">
+                <h3>TAGIHAN</h3>
+                <h3>BULANAN</h3>
+                <button onclick="showPriceList(event, 'TAGIHAN BULANAN')">List Harga</button>
             </div>
             <!-- Tambahkan lebih banyak produk di sini -->
         </div>
@@ -191,17 +205,16 @@
     <div id="payment" class="container hidden payment">
         <h2>Cara Pembayaran</h2>
         <ul>
-            <li>Transfer Bank: Bank XXXX, a/n Toko Online, No. Rekening XXXXXXXX</li>
-            <li>OVO: Nomor OVO XXXXXXXXX</li>
-            <li>GoPay: Nomor GoPay XXXXXXXXX</li>
+            <li>CASH</li>
+            <li>TRANSFER BANK</li>
+            <li>E-WALLET</li>
         </ul>
-        <p>Pastikan untuk melakukan pembayaran sesuai dengan total yang tertera pada halaman checkout.</p>
+        <p>Pastikan untuk melakukan pembayaran sesuai.</p>
     </div>
     <div id="contact" class="container hidden">
         <h2>Kontak Kami</h2>
-        <p>WhatsApp: 123456789</p>
-        <p>Instagram: @toko_online</p>
-        <p>TikTok: @toko_online</p>
+        <p>WhatsApp: 085821354226</p>
+        <p>Instagram: @abdi2zz</p>
     </div>
     <div id="price-list" class="container hidden price-list">
         <h2>Daftar Harga</h2>
@@ -233,25 +246,104 @@
             priceListElement.innerHTML = ''; // Mengosongkan daftar harga sebelum menambahkan yang baru
             
             switch (productName) {
-                case 'Produk 1':
+                case 'FREE FIRE':
                     priceListElement.innerHTML = `
-                        <li>100 Diamond - Rp 16.000</li>
-                        <li>200 Diamond - Rp 30.000</li>
-                        <li>500 Diamond - Rp 70.000</li>
+                        <li>20   💎 - Rp 3.500</li>
+                        <li>50   💎 - Rp 7.500</li>
+                        <li>70   💎 - Rp 10.000</li>
+                        <li>100  💎 - Rp 14.000</li>
+                        <li>140  💎 - Rp 19.000</li>
+                        <li>210  💎 - Rp 28.000</li>
+                        <li>355  💎 - Rp 45.000</li>
+                        <li>520  💎 - Rp 68.000</li>
+                        <li>720  💎 - Rp 90.000</li>
+                        <li>1075 💎 - Rp 135.000</li>
+                        <li>2000 💎 - Rp 255.000</li>
+                        <li>Mingguan - Rp 29.000</li>
+                        <li>Bulanan - Rp 85.000</li>
                     `;
                     break;
-                case 'Produk 2':
+                case 'MOBILE LEGENDS':
                     priceListElement.innerHTML = `
-                        <li>50 Diamond - Rp 10.000</li>
-                        <li>150 Diamond - Rp 25.000</li>
-                        <li>300 Diamond - Rp 55.000</li>
+                        <li>3   💎 - Rp 1.250</li>
+                        <li>5   💎 - Rp 1.700</li>
+                        <li>10  💎 - Rp 3.500</li>
+                        <li>15  💎 - Rp 5.300</li>
+                        <li>20  💎 - Rp 7.000</li>
+                        <li>30  💎 - Rp 10.000</li>
+                        <li>36  💎 - Rp 12.000</li>
+                        <li>45  💎 - Rp 15.000</li>
+                        <li>50  💎 - Rp 16.300</li>
+                        <li>60  💎 - Rp 19.000</li>
+                        <li>70  💎 - Rp 21.500</li>
+                        <li>86  💎 - Rp 25.500</li>
+                        <li>100 💎 - Rp 29.500</li>
+                        <li>140 💎 - Rp 40.000</li>
+                        <li>172 💎 - Rp 48.500</li>
+                        <li>200 💎 - Rp 56.000</li>
+                        <li>275 💎 - Rp 71.500</li>
                     `;
                     break;
-                case 'Produk 3':
+                case 'PUBG MOBILE':
                     priceListElement.innerHTML = `
-                        <li>200 Diamond - Rp 30.000</li>
-                        <li>400 Diamond - Rp 60.000</li>
-                        <li>1000 Diamond - Rp 120.000</li>
+                        <li>SEDANG DALAM PERBAIKAN</li>
+                    `;
+                    break;
+                    case 'PULSA':
+                    priceListElement.innerHTML = `
+                        <li>5000 - Rp 7.000</li>
+                        <li>10.000 - Rp 11.000</li>
+                        <li>15.000 - Rp 17.000</li>
+                        <li>20.000 - Rp 22.000</li>
+                        <li>30.000 - Rp 32.000</li>
+                        <li>40.000 - Rp 42.000</li>
+                        <li>50.000 - Rp 52.000</li>
+                        <li>60.000 - Rp 63.000</li>
+                        <li>70.000 - Rp 73.000</li>
+                        <li>80.000 - Rp 83.000</li>
+                        <li>90.000 - Rp 93.000</li>
+                        <li>100.000 - Rp 103.000</li>
+                        <li>150.000 - Rp 153.000</li>
+                        <li>200.000 - Rp 203.000</li>
+                    `;
+                    break;
+                    case 'TOKEN LISTRIK':
+                    priceListElement.innerHTML = `
+                        <li>PLN 15.000 - Rp 18.000</li>
+                        <li>PLN 20.000 - Rp 23.000</li>
+                        <li>PLN 50.000 - Rp 53.000</li>
+                        <li>PLN 100.000 - Rp 103.000</li>
+                        <li>PLN 200.000 - Rp 203.000</li>
+                    `;
+                    break;
+                    case 'EWALLET':
+                    priceListElement.innerHTML = `
+                        <li>TOP UP</li>
+                        <li> .</li>
+                        <li>DANA</li>
+                        <li>OVO</li>
+                        <li>SHOPEE</li>
+                        <li>MANDIRI E-TOLL</li>
+                        <li>BRI BRIZZI</li>
+                        <li>LinkAja</li>
+                        <li> .</li>
+                        <li>Admin - Rp 4.000</li>
+                        <li>Untuk transaksi Rp 10.000 - Rp 200.000</li>
+                    `;
+                    break;
+                    case 'TAGIHAN BULANAN':
+                    priceListElement.innerHTML = `
+                        <li>Pembayaran</li>
+                        <li> .</li>
+                        <li>AIR PDAM</li>
+                        <li>INDIHOME</li>
+                        <li>PLN PASCABAYAR</li>
+                        <li>TV KABEL</li>
+                        <li>BPJS KESEHATAN</li>
+                        <li> .</li>
+                        <li>Admin - Rp 5.000</li>
+                        <li>Untuk transaksi Rp 10.000 - Rp 200.000</li>
+                    
                     `;
                     break;
                 // Tambahkan case untuk produk lain jika diperlukan
